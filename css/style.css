@@ -1,0 +1,547 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #f8f9ff;
+    color: #17172b;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    background: rgba(255, 255, 255, 0.90);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #6c4df6 !important;
+}
+
+.navbar-brand i {
+    margin-right: 7px;
+}
+
+.nav-link {
+    color: #444 !important;
+    font-weight: 500;
+    margin: 0 8px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #6c4df6 !important;
+}
+
+.btn-login {
+    border: 1px solid #6c4df6;
+    color: #6c4df6;
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background: #6c4df6;
+    color: white;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0 70px;
+}
+
+.hero-content {
+    animation: fadeUp 1s ease forwards;
+}
+
+.badge-custom {
+    display: inline-block;
+    background: #eeeaff;
+    color: #6847e8;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 22px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #6847e8, #a45cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 580px;
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.btn-primary-custom {
+    background: linear-gradient(135deg, #6847e8, #925cff);
+    color: white;
+    border: none;
+    padding: 14px 27px;
+    border-radius: 12px;
+    font-weight: 600;
+    box-shadow: 0 10px 25px rgba(108, 77, 246, 0.25);
+    transition: 0.3s;
+}
+
+.btn-primary-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(108, 77, 246, 0.35);
+    color: white;
+}
+
+.btn-outline-custom {
+    padding: 13px 25px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    margin-left: 10px;
+    font-weight: 600;
+    color: #333;
+    background: white;
+    transition: 0.3s;
+}
+
+.btn-outline-custom:hover {
+    border-color: #6847e8;
+    color: #6847e8;
+}
+
+
+/* =====================================================
+   VIDEO PREVIEW
+===================================================== */
+
+.preview-wrapper {
+    position: relative;
+    animation: float 4s ease-in-out infinite;
+}
+
+.video-card {
+    background: white;
+    border-radius: 24px;
+    padding: 15px;
+    box-shadow: 0 25px 70px rgba(47, 35, 100, 0.18);
+    transform: rotate(2deg);
+}
+
+.video-screen {
+    height: 390px;
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(104, 71, 232, 0.85),
+            rgba(160, 90, 255, 0.75)
+        ),
+        url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.play-button {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: white;
+    color: #6847e8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+    padding-left: 5px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+}
+
+
+/* =====================================================
+   FLOATING CARDS
+===================================================== */
+
+.floating-card {
+    position: absolute;
+    background: white;
+    padding: 13px 18px;
+    border-radius: 13px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 5;
+}
+
+.card-one {
+    left: -25px;
+    top: 60px;
+    animation: floatSmall 3s ease-in-out infinite;
+}
+
+.card-two {
+    right: -20px;
+    bottom: 60px;
+    animation: floatSmall 3.5s ease-in-out infinite;
+}
+
+
+/* =====================================================
+   BACKGROUND SHAPES
+===================================================== */
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(2px);
+    z-index: -1;
+}
+
+.shape-one {
+    width: 300px;
+    height: 300px;
+    background: rgba(142, 102, 255, 0.12);
+    top: 80px;
+    left: -120px;
+}
+
+.shape-two {
+    width: 350px;
+    height: 350px;
+    background: rgba(198, 112, 255, 0.10);
+    right: -150px;
+    bottom: -100px;
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.features-section {
+    padding: 90px 0;
+    background: white;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-weight: 800;
+    font-size: 2.4rem;
+}
+
+.section-title p {
+    color: #777;
+    max-width: 600px;
+    margin: 12px auto;
+}
+
+
+/* =====================================================
+   FEATURE CARD
+===================================================== */
+
+.feature-card {
+    height: 100%;
+    padding: 30px;
+    border-radius: 18px;
+    background: #fff;
+    border: 1px solid #eee;
+
+    transition: 0.35s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    border-color: #dcd2ff;
+    box-shadow: 0 20px 40px rgba(68, 43, 150, 0.10);
+}
+
+.feature-icon {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 15px;
+
+    background: #eeeaff;
+    color: #6847e8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+}
+
+.feature-card h4 {
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #777;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta-section {
+    padding: 80px 0;
+}
+
+.cta-box {
+    background: linear-gradient(135deg, #6041dc, #9b5cff);
+    border-radius: 25px;
+    padding: 65px 30px;
+    color: white;
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-box h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.cta-box p {
+    opacity: 0.9;
+    margin-bottom: 28px;
+}
+
+.btn-white {
+    background: white;
+    color: #6847e8;
+
+    padding: 13px 28px;
+
+    border-radius: 11px;
+
+    font-weight: 700;
+
+    border: none;
+
+    transition: 0.3s;
+}
+
+.btn-white:hover {
+    transform: translateY(-3px);
+    color: #6847e8;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #17172b;
+    color: #aaa;
+    padding: 25px 0;
+    text-align: center;
+}
+
+footer span {
+    color: #9b7cff;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+
+@keyframes floatSmall {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .hero {
+        text-align: center;
+        padding-top: 130px;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .preview-wrapper {
+        margin-top: 60px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons a {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .video-screen {
+        height: 280px;
+    }
+
+    .floating-card {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .card-one {
+        left: -5px;
+    }
+
+    .card-two {
+        right: -5px;
+    }
+
+    .section-title h2,
+    .cta-box h2 {
+        font-size: 2rem;
+    }
+
+}
+.btn-signup {
+    background: linear-gradient(135deg, #6847e8, #925cff);
+    color: white !important;
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-weight: 600;
+    border: 1px solid #6847e8;
+    margin-left: 8px;
+    transition: 0.3s;
+}
+
+.btn-signup:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(108, 77, 246, 0.25);
+}

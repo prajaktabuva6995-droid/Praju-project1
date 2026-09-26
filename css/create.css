@@ -1,0 +1,381 @@
+/* =========================================
+   BASIC
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background-image:
+        url(../image/image.jpg);
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+    color: #ffffff;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+
+    max-width: 850px;
+
+}
+
+
+/* =========================================
+   CREATE VIDEO CARD
+========================================= */
+
+.create-video {
+
+    padding: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.25);
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(8px);
+
+    
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.20);
+
+    animation:
+        formAnimation 0.8s ease;
+}
+
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes formAnimation {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #7c3aed;
+
+    border:
+        1px solid
+        #8b5cf6;
+
+    color: #ffffff;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.create-video h2 {
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+
+    color: #ffffff;
+}
+
+
+.create-video
+.text-center p {
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.form-label {
+
+    color: #e2e8f0;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+
+/* =========================================
+   INPUT ICON
+========================================= */
+
+.input-group-text {
+
+    min-width: 45px;
+
+    justify-content: center;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+
+    color: #a78bfa;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   INPUT / TEXTAREA / SELECT
+========================================= */
+
+.form-control,
+.form-select {
+
+    min-height: 46px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+
+    color: #ffffff;
+
+    font-size: 13px;
+}
+
+
+textarea.form-control {
+
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+
+.form-control::placeholder {
+
+    color: #94a3b8;
+}
+
+
+/* =========================================
+   DROPDOWN ARROW
+========================================= */
+
+.form-select {
+
+    cursor: pointer;
+
+    appearance: auto;
+
+    -webkit-appearance: auto;
+
+    -moz-appearance: auto;
+}
+
+
+/* =========================================
+   FOCUS
+========================================= */
+
+.form-control:focus,
+.form-select:focus {
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    color: #ffffff;
+
+    border-color: #8b5cf6;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(124, 58, 237, 0.15);
+}
+
+
+/* =========================================
+   DROPDOWN OPTIONS
+========================================= */
+
+.form-select option {
+
+    color: #111827;
+
+    background: #ffffff;
+}
+
+
+/* =========================================
+   TEXTAREA ICON
+========================================= */
+
+.textarea-icon {
+
+    align-items: flex-start;
+
+    padding-top: 13px;
+}
+
+
+/* =========================================
+   CREATE VIDEO BUTTON
+========================================= */
+
+.create-video-btn {
+
+    width: 100%;
+
+    min-height: 48px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #9333ea
+        );
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        all 0.3s ease;
+
+    cursor: pointer;
+}
+
+
+.create-video-btn:hover {
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6d28d9,
+            #7e22ce
+        );
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(124, 58, 237, 0.40);
+}
+
+
+.create-video-btn:active {
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 5px 12px
+        rgba(124, 58, 237, 0.30);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 576px) {
+
+    .create-video {
+
+        padding: 25px 20px;
+
+        border-radius: 15px;
+    }
+
+
+    .create-video h2 {
+
+        font-size: 24px;
+    }
+
+}
